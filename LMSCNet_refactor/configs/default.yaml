@@ -1,0 +1,27 @@
+# ==============================================================================
+# Copyright© The University of Texas at Austin, 2025. All rights reserved.
+# Author: Alex Diaz (j.a.diaz@utexas.edu)
+# 
+# About
+# --------------
+# Configuration file for training
+# ==============================================================================
+
+model:
+  name: lmscnet
+  num_classes: 6
+
+data:
+  data_dir: "./dataset" # Root of SemanticKITTI-formatted dataset
+  label_map: "configs/label_map.yaml"
+  volume_size: [60, 36, 60] # (W, H, D) m
+  voxel_size: 0.1
+  class_frequencies: null
+
+train:
+  split_ratio: [0.8, 0.1, 0.1] # [train, validate, test]
+  epochs: 100
+  batch_size: 4
+  learning_rate: 0.001
+  log_every: 10
+  checkpoint_dir: checkpoints/
