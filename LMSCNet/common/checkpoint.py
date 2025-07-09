@@ -47,7 +47,12 @@ def load_model(model, filepath, logger):
     model.module.load_state_dict(checkpoint.pop('model'))
   else:
     model.load_state_dict(checkpoint.pop('model'))
-  logger.info('=> Model loaded at {}'.format(filepath))
+  
+  if logger is not None:
+      logger.info('=> Model loaded at {}'.format(filepath))
+  else:
+      print(f"=> Model loaded at {filepath}")  
+    
   return model
 
 
