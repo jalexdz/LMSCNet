@@ -9,7 +9,7 @@ def convert_excel_to_label_map(excel_path, output_path):
     # Drop rows where standard_name is blank
     df = df[df['standard_name'].notnull() & (df['standard_name'] != '')]
     unique_names = sorted(df['standard_name'].unique())
-    name_to_id = {name: i for i, name in enumerate(unique_names)}
+    name_to_id = {name: i + 1 for i, name in enumerate(unique_names)}
 
     label_map = {'labels': {}, 'color_map': {}}
     default_colors = [
@@ -24,7 +24,7 @@ def convert_excel_to_label_map(excel_path, output_path):
 
     for i, row in df.iterrows():
         name = str(row['standard_name'])
-        raw_name = str(row['raw_name'])
+        raw_name = str(row['raw_name']).strip().lower().replace(' ', '_')
         remap_id = name_to_id[name]
 
         label_map['labels'][remap_id] = name
