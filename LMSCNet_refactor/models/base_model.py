@@ -21,23 +21,6 @@ class BaseSSCModel(nn.Module, ABC):
         # Load .yaml configuration
         self.cfg = cfg
         self.num_class = cfg['model']['num_classes']
-        self.use_class_weights = 'class_frequencies' in cfg['data']
-
-        # Choose whether to downweight frequent classes
-        if self.use_class_weights:
-            self.class_weights = self._compute_class_weights(cfg['data']['class_frequencies'])
-        else:
-            self.class_weights = None
-
-    def _compute_class_weights(self, freqs):
-        """
-        Computes inverse-log class weights to downweight frequent classes (https://arxiv.org/pdf/2008.10559.pdf).
-        """   
-        freqs = np.array(freqs)
-        eps = 1e-3
-        weights = 1 / np.log(freqs + eps)
-        weights = torch.tensor(weights, dtype=torch.float32)
-        return weights
            
     @abstractmethod
     def forward(self, x):

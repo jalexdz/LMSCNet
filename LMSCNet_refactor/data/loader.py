@@ -6,18 +6,19 @@ import random
 import yaml
 import glob
 import open3d as o3d
+import matplotlib.pyplot as plt
 
 from scripts.utils.voxelizer import Voxelizer
 from scripts.utils.random_transform import RandomTransform
 
 class SynthSSCDataset(Dataset):
-    def __init__(self, cfg, split='train', seed=42):
+    def __init__(self, cfg, split='train', mode='default', seed=42):
         self.root_dir = cfg['data']['data_dir']
         self.split_ratio = cfg['train']['split_ratio']
-        self.voxelizer = Voxelizer(cfg['data']['volume_size'], cfg['data']['voxel_size'])
+        self.voxelizer = Voxelizer(cfg['data']['volume_size_max'], cfg['data']['volume_size_min'], cfg['data']['voxel_size'])
         self.transform = RandomTransform() if cfg['data'].get('transform', False) else None
         self.split = split
-
+        self.mode = mode
         with open(cfg['data']['label_map'], 'r') as f:
             label_config = yaml.safe_load(f)
 
@@ -57,28 +58,39 @@ class SynthSSCDataset(Dataset):
 
         # Load dense data 
         dense_points = o3d.io.read_point_cloud(dense_path)
-        raw_labels = np.loadtxt(label_path, dtype=str)
+        with open(label_path, 'r') as f:
+            raw_labels = np.array([line.lower().strip().replace(' ', '_') for line in f])
 
         # Remap
         labels = np.array([
-            self.raw_to_remap.get(name, 255) for name in raw_labels
+            self.raw_to_remap.get(name.lower().strip().replace(' ', '_')) for name in raw_labels
         ], dtype=np.uint8).copy()
 
+        sparse_pts = np.asarray(sparse_points.points)
+        dense_pts = np.asarray(dense_points.points)
+
         if self.transform:
-            sparse_points = self.transform(sparse_points)
-            dense_points, labels = self.transform(dense_points, labels)
+            R, t = self.transform.sample()
+            sparse_pts = self.transform(sparse_pts, R=R, t=t)
+            dense_pts, labels = self.transform(dense_pts, labels, R=R, t=t)
 
-        sparse_vox = self.voxelizer.voxelize(np.asarray(sparse_points.points))
-        label_vox = self.voxelizer.voxelize_with_labels(np.asarray(dense_points.points), labels)
+        # Voxelize
+        sparse_vox = self.voxelizer.voxelize(np.asarray(sparse_pts))
+        label_vox = self.voxelizer.voxelize_with_labels(np.asarray(dense_pts), labels)
+        #self.voxelizer.visualize_alignment(sparse_pts, dense_pts, sparse_vox, label_vox)
 
+        if self.mode == 'scan_labels':
+            return label_vox.squeeze(0)
+        
         return {
-            "3D_OCCUPANCY": sparse_vox,
-            "3D_LABEL": label_vox
+            '3D_OCCUPANCY': torch.from_numpy(sparse_vox).unsqueeze(0).float().to('cuda'), 
+            '3D_LABEL': torch.from_numpy(label_vox).float().to('cuda')
         }
-    
+        
     def __len__(self):
         return len(self.split_data[self.split])
 
+   
 # class SSCDataset(Dataset):
 #     def __init__(self, split: str, cfg: dict, seed=42):
 #         self.data_dir = cfg['data']['data_dir']

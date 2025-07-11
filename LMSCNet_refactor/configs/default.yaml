@@ -9,21 +9,22 @@
 
 model:
   name: lmscnet
-  num_classes: 6
+  num_classes: 14
 
 data:
-  data_dir: "./dataset" # Root of SemanticKITTI-formatted dataset
-  label_map: "configs/label_map.yaml"
-  volume_size: [60, 36, 60] # (W, H, D) m
-  voxel_size: 0.1
-  raw_volume_size: [60, 36, 60] # (W, H, D) m
-  class_frequencies: null
-  transform: true
+  data_dir: "/home/adiaz/Documents/ros_ws/data" # Root of SemanticKITTI-formatted dataset
+  label_map: "/home/adiaz/Documents/thesis/repos/LMSCNet/LMSCNet_refactor/configs/label_map.yaml"
+  volume_size_max: [2.8, 1.85, 4.5] # (W, H, D) m
+  volume_size_min: [-2.8, -1.35, -1.1] # (W, H, D) m
+  voxel_size: 0.05
+  class_frequencies: "/home/adiaz/Documents/thesis/repos/LMSCNet/LMSCNet_refactor/configs/class_freq.npy"
+  transform: false
+
 
 train:
   split_ratio: [0.8, 0.1, 0.1] # [train, validate, test]
   epochs: 100
-  batch_size: 4
+  batch_size: 2
   learning_rate: 0.001
   log_every: 10
   checkpoint_dir: checkpoints/
