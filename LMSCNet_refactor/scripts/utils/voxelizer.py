@@ -8,7 +8,7 @@ class Voxelizer():
 
         self.volume_dims = np.asarray(volume_size_max) - np.asarray(volume_size_min)
 
-        self.grid_dims = tuple((np.asarray(self.volume_dims) / self.voxel_size).astype(np.int32))
+        self.grid_dims = tuple(np.round(np.asarray(self.volume_dims) / self.voxel_size).astype(np.int32))
 
     def voxelize(self, point_cloud):
         ''' 

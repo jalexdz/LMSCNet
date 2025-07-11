@@ -87,6 +87,8 @@ def main():
         model.train()
         for i, batch in enumerate(train_loader):
             optimizer.zero_grad()
+            print('batch_dims', batch['3D_OCCUPANCY'].shape)
+
             scores = model(batch)
             loss_dict = model.compute_loss(scores, batch)
             loss = loss_dict['total']
