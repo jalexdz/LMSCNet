@@ -26,5 +26,5 @@ train:
   epochs: 100
   batch_size: 1
   learning_rate: 0.001
-  log_every: 10
+  log_every: 5
   checkpoint_dir: checkpoints/

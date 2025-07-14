@@ -86,8 +86,8 @@ def main():
     for epoch in range(cfg['train']['epochs']):
         model.train()
         for i, batch in enumerate(train_loader):
+            print(f'Epoch {epoch}, batch {i}')
             optimizer.zero_grad()
-            print('batch_dims', batch['3D_OCCUPANCY'].shape)
 
             scores = model(batch)
             loss_dict = model.compute_loss(scores, batch)

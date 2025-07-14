@@ -174,9 +174,7 @@ class LMSCNetModel(BaseSSCModel):
         vmax = np.array(cfg['data']['volume_size_max'])
         voxel_size = cfg['data']['voxel_size']
  
-        input_dim = np.round((vmax - vmin) / voxel_size).astype(int)
-        print(input_dim)
-    
+        input_dim = np.round((vmax - vmin) / voxel_size).astype(int)    
 
         num_classes = cfg['model']['num_classes']
         f = input_dim[1] # Base dimension

@@ -17,11 +17,11 @@ from data.loader import SynthSSCDataset  # Adjust if different
 def compute_class_frequencies(dataset, num_classes, ignore_index=255):
     class_counts = np.zeros(num_classes, dtype=np.int64)
 
-    loader = DataLoader(dataset, batch_size=1, shuffle=False, num_workers=4)
+    loader = DataLoader(dataset, batch_size=1, shuffle=False, num_workers=0)
 
     for data in tqdm(loader, desc="Scanning voxel labels"):
         label = data['3D_LABEL']  # Should be [B, D, H, W]
-        label = label.squeeze().numpy().flatten()
+        label = label.squeeze().cpu().numpy().flatten().astype(np.int64)
         label = label[label != ignore_index]
         counts = np.bincount(label, minlength=num_classes)
         class_counts += counts

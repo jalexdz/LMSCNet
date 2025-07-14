@@ -48,35 +48,9 @@ labels:
   12: unlabeled
   13: wall
 raw_to_remap:
-  6_cube_storagee: 5
-  aluminum__bar_1: 12
-  aluminum__bar_1_clone: 12
-  aluminum__bar_1_clone_0: 12
-  aluminum__bar_1_clone_1: 12
-  aluminum__bar_1_clone_2: 12
-  aluminum__bar_1_clone_3: 12
-  aluminum__bar_1_clone_4: 12
-  aluminum__bar_1_clone_5: 12
-  aluminum__bar_1_clone_6: 12
-  aluminum__bar_1_clone_7: 12
-  aluminum__bar_1_clone_8: 12
-  aluminum__bar_1_clone_9: 12
-  arm_part: 12
-  arm_part_clone: 12
-  arm_part_clone_0: 12
-  arm_part_clone_1: 12
-  asus_xtion_pro_camera: 12
-  big_box: 5
-  big_box3: 5
-  big_box_0: 5
+  6_cube_storagee: 9
   big_box_2: 5
-  big_box_4: 5
-  big_box_clone: 5
   biscuit_box: 5
-  biscuit_box_clone_0: 5
-  biscuit_box_clone_2: 5
-  blue_bin_cuboid: 5
-  blue_bin_cuboid_0: 5
   book_1: 12
   book_10: 12
   book_10_0: 12
@@ -114,6 +88,11 @@ raw_to_remap:
   book_orange: 12
   book_pink: 12
   book_red: 12
+  book_red_clone: 12
+  book_red_clone_0: 12
+  book_red_clone_1: 12
+  book_red_clone_2: 12
+  book_red_clone_3: 12
   book_small_1: 12
   book_small_3: 12
   book_small_3_0: 12
@@ -147,43 +126,10 @@ raw_to_remap:
   bottle_white_wine_clone_4: 12
   bowl_1: 12
   box_15x30: 5
-  box_15x30_clone: 5
-  box_15x30_clone_0: 5
-  box_15x30_clone_clone: 5
-  box_15x30_clone_clone_0: 5
-  box_15x30_clone_clone_0_clone: 5
-  box_15x30_clone_clone_clone: 5
-  box_15x30_clone_clone_clone_clone: 5
-  brick__bar_1: 12
-  brick__bar_1_clone: 12
-  brick__bar_1_clone_0: 12
-  brick__bar_1_clone_1: 12
-  brick__bar_1_clone_10: 12
-  brick__bar_1_clone_11: 12
-  brick__bar_1_clone_2: 12
-  brick__bar_1_clone_3: 12
-  brick__bar_1_clone_4: 12
-  brick__bar_1_clone_5: 12
-  brick__bar_1_clone_6: 12
-  brick__bar_1_clone_7: 12
-  brick__bar_1_clone_8: 12
-  brick__bar_1_clone_9: 12
-  brick_wall_2: 13
-  brick_wall_lshaped_1: 13
-  brick_wall_lshaped_1_clone: 13
-  brick_wall_lshaped_1_clone_0: 13
-  brick_wall_lshaped_1_clone_0_clone: 13
-  brick_wall_lshaped_1_clone_0_clone_clone: 13
-  brick_wall_lshaped_1_clone_0_clone_clone_clone: 13
-  brick_wall_lshaped_1_clone_0_clone_clone_clone_clone: 13
-  cabinet: 2
-  cabinet_clone: 2
-  cafe_table: 10
-  cafe_table_clone: 10
-  cafe_table_clone_0: 10
+  box_24x15w: 5
+  box_36x15w: 5
+  brick_wall_1: 13
   camera_fujica: 12
-  camera_fujica_clone: 12
-  camera_fujica_clone_0: 12
   can_coke: 12
   can_coke_0: 12
   can_coke_clone: 12
@@ -201,7 +147,6 @@ raw_to_remap:
   can_pepsi_clone: 12
   can_pepsi_clone_0: 12
   can_pepsi_clone_1: 12
-  can_pepsi_clone_clone: 12
   can_sprite: 12
   can_sprite_clone: 12
   can_sprite_clone_0: 12
@@ -209,51 +154,17 @@ raw_to_remap:
   can_sprite_clone_2: 12
   can_sprite_clone_3: 12
   candy_orange_2: 12
-  cardboard_box: 5
-  cardboard_box_clone: 5
-  cardboard_box_clone_0: 5
-  cardboard_box_clone_2: 5
-  cardboard_box_clone_3: 5
-  cardboard_box_clone_4: 5
+  cardboard_box: 12
   chair_1: 3
   chair_1_clone: 3
   chair_1_clone_0: 3
   chair_1_clone_0_clone: 3
-  chair_1_clone_0_clone_clone: 3
-  chair_1_clone_0_clone_clone_clone: 3
-  chair_1_clone_0_clone_clone_clone_clone: 3
   chair_1_clone_clone: 3
-  chair_1_clone_clone_0: 3
   chair_1_clone_clone_clone: 3
   chair_2: 3
-  chair_2_clone: 3
-  chair_2_clone_0: 3
-  chair_2_clone_1: 3
-  chair_2_clone_10: 3
-  chair_2_clone_11: 3
-  chair_2_clone_12: 3
-  chair_2_clone_13: 3
-  chair_2_clone_14: 3
-  chair_2_clone_15: 3
-  chair_2_clone_15_clone: 3
-  chair_2_clone_16: 3
-  chair_2_clone_17: 3
-  chair_2_clone_18: 3
-  chair_2_clone_2: 3
-  chair_2_clone_3: 3
-  chair_2_clone_4: 3
-  chair_2_clone_5: 3
-  chair_2_clone_6: 3
-  chair_2_clone_7: 3
-  chair_2_clone_8: 3
-  chair_2_clone_9: 3
   chair_3: 3
   chair_3_clone: 3
   chair_3_clone_0: 3
-  chair_3_clone_0_clone: 3
-  chair_3_clone_0_clone_0: 3
-  chair_3_clone_0_clone_clone: 3
-  chair_3_clone_0_clone_clone_clone: 3
   chair_3_clone_1: 3
   chair_3_clone_10: 3
   chair_3_clone_11: 3
@@ -269,6 +180,10 @@ raw_to_remap:
   chair_3_clone_1_clone_0: 3
   chair_3_clone_1_clone_0_clone: 3
   chair_3_clone_1_clone_0_clone_0: 3
+  chair_3_clone_1_clone_0_clone_clone: 3
+  chair_3_clone_1_clone_0_clone_clone_0: 3
+  chair_3_clone_1_clone_0_clone_clone_0_clone: 3
+  chair_3_clone_1_clone_0_clone_clone_0_clone_0: 3
   chair_3_clone_2: 3
   chair_3_clone_20: 3
   chair_3_clone_21: 3
@@ -292,53 +207,38 @@ raw_to_remap:
   chair_set_3: 3
   chair_set_3_clone: 3
   cinder_block: 12
-  cinder_block_clone: 12
-  cinder_block_clone_0: 12
-  cinder_block_clone_1: 12
-  cinder_block_clone_2: 12
-  cinder_block_clone_3: 12
+  cinder_block_2: 12
+  cinder_block_wide: 12
   clock_blue: 12
   clock_digital: 12
   coca_cola: 12
   coca_cola_0: 12
+  coca_cola_0_clone: 12
+  coca_cola_0_clone_0: 12
+  coca_cola_0_clone_1: 12
+  coca_cola_0_clone_10: 12
+  coca_cola_0_clone_11: 12
+  coca_cola_0_clone_12: 12
+  coca_cola_0_clone_13: 12
+  coca_cola_0_clone_14: 12
+  coca_cola_0_clone_15: 12
+  coca_cola_0_clone_16: 12
+  coca_cola_0_clone_2: 12
+  coca_cola_0_clone_3: 12
+  coca_cola_0_clone_4: 12
+  coca_cola_0_clone_5: 12
+  coca_cola_0_clone_6: 12
+  coca_cola_0_clone_7: 12
+  coca_cola_0_clone_8: 12
+  coca_cola_0_clone_9: 12
   coffee_box: 5
-  coffee_box_clone: 5
-  coffee_box_clone_0: 5
-  coffee_box_clone_1: 5
-  coffee_box_clone_2: 5
-  coffee_box_clone_3: 5
   coffee_machine: 12
-  coffee_spill: 12
   coffee_table_1: 10
-  coke_can: 12
-  coke_can_clone: 12
-  coke_can_clone_0: 12
-  coke_can_clone_1: 12
-  coke_can_clone_2: 12
-  coke_can_clone_clone: 12
-  coke_can_clone_clone_clone: 12
-  coke_can_clone_clone_clone_0: 12
   computer_case: 4
   computer_case_0: 4
   computer_case_0_clone: 4
   computer_case_clone: 4
   construction_barrel: 1
-  construction_cone: 12
-  construction_cone_clone: 12
-  construction_cone_clone_0: 12
-  construction_cone_clone_0_clone: 12
-  construction_cone_clone_0_clone_0: 12
-  construction_cone_clone_1: 12
-  construction_cone_clone_1_clone: 12
-  create: 12
-  cross_joint_part: 12
-  cross_joint_part_clone: 12
-  cross_joint_part_clone_0: 12
-  cross_joint_part_clone_1: 12
-  cross_joint_part_clone_2: 12
-  cross_joint_part_clone_3: 12
-  cross_joint_part_clone_4: 12
-  cross_joint_part_clone_5: 12
   cup_blue: 12
   cup_blue_0: 12
   cup_blue_1: 12
@@ -365,22 +265,7 @@ raw_to_remap:
   cup_yellow: 12
   cup_yellow_0: 12
   cup_yellow_clone: 12
-  cup_yellow_clone_0: 12
-  cup_yellow_clone_1: 12
-  cylinder_yo: 12
-  cylinder_yo_clone: 12
-  cylinder_yo_clone_0: 12
-  cylinder_yo_clone_1: 12
   demo_tall_wall: 13
-  depth_camera: 12
-  depth_camera_clone: 12
-  depth_camera_clone_0: 12
-  depth_camera_clone_1: 12
-  depth_camera_clone_2: 12
-  depth_camera_clone_3: 12
-  depth_camera_clone_4: 12
-  depth_camera_clone_5: 12
-  depth_camera_clone_6: 12
   desk_brown: 10
   desk_brown_0: 10
   desk_brown_0_clone: 10
@@ -388,16 +273,30 @@ raw_to_remap:
   desk_brown_0_clone_clone_0: 10
   desk_brown_0_clone_clone_clone: 10
   desk_brown_clone: 10
-  desk_brown_clone_0: 10
-  desk_brown_clone_0_clone: 10
-  desk_brown_clone_1: 10
-  desk_brown_clone_1_clone: 10
-  desk_brown_clone_clone: 10
   desk_drawer: 10
   desk_drawer_clone: 10
   desk_drawer_clone_clone: 10
   desk_drawer_clone_clone_clone: 10
-  desk_yellow: 10
+  desk_drawer_clone_clone_clone_clone: 10
+  desk_drawer_clone_clone_clone_clone_0: 10
+  desk_drawer_clone_clone_clone_clone_0_clone_0: 10
+  desk_drawer_clone_clone_clone_clone_0_clone_1: 10
+  desk_drawer_clone_clone_clone_clone_0_clone_2: 10
+  desk_drawer_clone_clone_clone_clone_0_clone_3: 10
+  desk_drawer_clone_clone_clone_clone_0_clone_4: 10
+  desk_drawer_clone_clone_clone_clone_0_clone_4_clone: 10
+  desk_drawer_clone_clone_clone_clone_0_clone_4_clone_0: 10
+  desk_drawer_clone_clone_clone_clone_0_clone_4_clone_1: 10
+  desk_drawer_clone_clone_clone_clone_0_clone_4_clone_2: 10
+  desk_drawer_clone_clone_clone_clone_0_clone_4_clone_3: 10
+  desk_drawer_clone_clone_clone_clone_0_clone_4_clone_4: 10
+  desk_drawer_clone_clone_clone_clone_0_clone_4_clone_4_clone: 10
+  desk_drawer_clone_clone_clone_clone_0_clone_4_clone_4_clone_0: 10
+  desk_drawer_clone_clone_clone_clone_0_clone_4_clone_4_clone_1: 10
+  desk_drawer_clone_clone_clone_clone_0_clone_4_clone_4_clone_1_clone: 10
+  desk_drawer_clone_clone_clone_clone_0_clone_4_clone_4_clone_1_clone_0: 10
+  desk_drawer_clone_clone_clone_clone_0_clone_4_clone_4_clone_1_clone_1: 10
+  desk_drawer_clone_clone_clone_clone_1: 10
   donut_1: 12
   donut_2: 12
   donut_2_0: 12
@@ -405,20 +304,13 @@ raw_to_remap:
   donut_frost_1: 12
   donut_frost_2: 12
   donut_frost_3: 12
-  double_pendulum_with_base: 12
   drawer_white: 2
   drawer_white_0: 2
   drawer_white_clone: 2
-  drawer_white_clone_0: 2
   drawer_white_clone_clone: 2
-  drill: 12
-  drill_clone: 12
-  drill_clone_0: 12
-  drill_clone_1: 12
-  dropoff_box: 5
+  drc_practice_hinged_door: 13
   eraser: 12
   eraser_0: 12
-  euro_pallet: 12
   figurine_1: 12
   figurine_2: 12
   figurine_3: 12
@@ -442,80 +334,16 @@ raw_to_remap:
   file_box_1_clone: 5
   file_box_2: 5
   file_box_3: 5
-  file_box_3_0: 5
   file_box_3_clone: 5
   file_box_4: 5
-  file_box_4_0: 5
   file_box_4_clone: 5
   file_box_4_clone_0: 5
   file_cabinet_large: 2
   file_cabinet_large_clone: 2
-  file_cabinet_large_clone_0: 2
-  file_cabinet_large_clone_1: 2
-  file_cabinet_large_clone_2: 2
   file_cabinet_small: 2
   file_cabinet_small_clone: 2
-  file_cabinet_small_clone_0: 2
-  file_cabinet_small_clone_1: 2
-  file_cabinet_small_clone_2: 2
-  file_cabinet_small_clone_3: 2
   floor_room: 6
-  floor_room_0: 6
-  floor_room_1: 6
   fridge_cabinet_33x15: 2
-  gasket_part: 12
-  gear_part: 12
-  gear_part_clone: 12
-  gear_part_clone_0: 12
-  gear_part_clone_clone: 12
-  gearbox_bolt_blue: 12
-  gearbox_bolt_blue_clone: 12
-  gearbox_bottom_blue: 12
-  gearbox_bottom_blue_clone: 12
-  gearbox_bottom_blue_clone_clone: 12
-  gearbox_bottom_blue_clone_clone_0: 12
-  gearbox_bottom_blue_clone_clone_0_clone: 12
-  gearbox_bottom_blue_clone_clone_0_clone_0: 12
-  gearbox_bottom_blue_clone_clone_0_clone_1: 12
-  gearbox_bottom_blue_clone_clone_0_clone_10: 12
-  gearbox_bottom_blue_clone_clone_0_clone_11: 12
-  gearbox_bottom_blue_clone_clone_0_clone_2: 12
-  gearbox_bottom_blue_clone_clone_0_clone_3: 12
-  gearbox_bottom_blue_clone_clone_0_clone_4: 12
-  gearbox_bottom_blue_clone_clone_0_clone_5: 12
-  gearbox_bottom_blue_clone_clone_0_clone_6: 12
-  gearbox_bottom_blue_clone_clone_0_clone_7: 12
-  gearbox_bottom_blue_clone_clone_0_clone_8: 12
-  gearbox_bottom_blue_clone_clone_0_clone_9: 12
-  gearbox_largegear: 12
-  gearbox_largegear_clone: 12
-  gearbox_largegear_clone_clone: 12
-  gearbox_largegear_clone_clone_0: 12
-  gearbox_largegear_clone_clone_0_clone: 12
-  gearbox_largegear_clone_clone_0_clone_0: 12
-  gearbox_largegear_clone_clone_0_clone_1: 12
-  gearbox_largegear_clone_clone_0_clone_10: 12
-  gearbox_largegear_clone_clone_0_clone_11: 12
-  gearbox_largegear_clone_clone_0_clone_12: 12
-  gearbox_largegear_clone_clone_0_clone_13: 12
-  gearbox_largegear_clone_clone_0_clone_2: 12
-  gearbox_largegear_clone_clone_0_clone_3: 12
-  gearbox_largegear_clone_clone_0_clone_4: 12
-  gearbox_largegear_clone_clone_0_clone_5: 12
-  gearbox_largegear_clone_clone_0_clone_6: 12
-  gearbox_largegear_clone_clone_0_clone_7: 12
-  gearbox_largegear_clone_clone_0_clone_8: 12
-  gearbox_largegear_clone_clone_0_clone_9: 12
-  gearbox_largegear_clone_clone_clone: 12
-  gearbox_smallgear_grey: 12
-  gearbox_top: 12
-  gearbox_top_blue: 12
-  gearbox_top_blue_0: 12
-  gearbox_top_blue_0_clone: 12
-  gearbox_top_blue_0_clone_0: 12
-  gearbox_top_clone: 12
-  gearbox_top_clone_clone: 12
-  gearbox_top_clone_clone_clone: 12
   glovebox: 7
   glovebox_clone: 7
   glovebox_clone_0: 7
@@ -529,26 +357,6 @@ raw_to_remap:
   glovebox_clone_0_clone_clone_clone_clone: 7
   glovebox_clone_0_clone_clone_clone_clone_clone: 7
   glovebox_clone_1: 7
-  glovebox_clone_1_clone: 7
-  glovebox_clone_1_clone_0: 7
-  glovebox_clone_1_clone_1: 7
-  glovebox_clone_1_clone_2: 7
-  glovebox_clone_1_clone_2_clone: 7
-  glovebox_clone_1_clone_2_clone_clone: 7
-  glovebox_clone_1_clone_3: 7
-  glovebox_clone_1_clone_3_clone: 7
-  glovebox_clone_1_clone_3_clone_0: 7
-  glovebox_clone_1_clone_3_clone_1: 7
-  glovebox_clone_1_clone_3_clone_2: 7
-  glovebox_clone_1_clone_clone: 7
-  glovebox_clone_1_clone_clone_0: 7
-  glovebox_clone_1_clone_clone_1: 7
-  glovebox_clone_1_clone_clone_2: 7
-  glovebox_clone_1_clone_clone_3: 7
-  glovebox_clone_1_clone_clone_3_clone: 7
-  glovebox_clone_1_clone_clone_3_clone_0: 7
-  glovebox_clone_1_clone_clone_3_clone_1: 7
-  glovebox_clone_1_clone_clone_3_clone_2: 7
   glovebox_clone_2: 7
   glovebox_clone_clone: 7
   glovebox_clone_clone_0: 7
@@ -559,78 +367,71 @@ raw_to_remap:
   grey_tote_clone_clone_clone_clone: 5
   grey_tote_clone_clone_clone_clone_0: 5
   grey_tote_clone_clone_clone_clone_clone: 5
-  ground_plane: 6
-  human_female_1: 8
-  human_female_1_0: 8
+  grey_wall: 13
+  grey_wall_clone: 13
+  grey_wall_clone_clone: 13
+  ground_plane: 8
   human_female_1_1: 8
-  human_female_1_1_0: 8
-  human_female_1_1_1: 8
-  human_female_1_1_2: 8
-  human_female_1_1_clone: 8
-  human_female_1_2: 8
-  human_female_1_3: 8
-  human_female_1_4: 8
-  human_female_1_5: 8
   human_female_2: 8
   human_female_2_clone: 8
   human_female_2_clone_0: 8
   human_female_4: 8
-  human_female_4_0: 8
-  human_female_4_1: 8
-  human_female_4_2: 8
-  human_female_sat: 8
-  human_female_sat_clone: 8
-  human_female_sat_clone_clone: 8
-  human_female_sat_clone_clone_0: 8
-  human_male_1: 8
-  human_male_1_0: 8
   human_male_1_1: 8
-  human_male_1_1_0: 8
-  human_male_1_1_1: 8
-  human_male_1_2: 8
-  human_male_1_3: 8
-  human_male_1_4: 8
-  human_male_1_5: 8
-  human_male_1_5_clone: 8
-  human_male_1_5_clone_0: 8
-  human_male_1_5_clone_1: 8
+  human_male_1_1_clone: 8
+  human_male_1_1_clone_0: 8
+  human_male_1_1_clone_1: 8
   human_male_2: 8
-  human_male_3: 8
-  human_male_3_0: 8
-  human_male_3_1: 8
+  human_male_2_clone: 8
   human_male_4: 8
-  human_male_4_0: 8
-  human_male_4_1: 8
-  human_male_4_2: 8
   human_male_4_clone: 8
-  keyboard: 12
-  keyboard_clone: 12
-  keyboard_clone_clone: 12
-  keyboard_clone_clone_clone: 12
-  kitchen_chair: 3
-  kitchen_chair_clone: 3
+  human_male_4_clone_0: 8
+  human_male_4_clone_clone: 8
+  husky: 12
+  keyboard: 4
+  keyboard_clone: 4
+  keyboard_clone_0: 4
+  keyboard_clone_1: 4
+  keyboard_clone_2: 4
+  keyboard_clone_3: 4
+  keyboard_clone_clone: 4
+  keyboard_clone_clone_clone: 4
   labtop_mac_1: 4
   labtop_mac_2: 4
   labtop_mac_3: 4
   labtop_mac_3_clone: 4
+  labtop_mac_3_clone_0: 4
   lamp_large: 12
   lamp_large_clone: 12
   lamp_table_metal: 10
   lamp_table_small: 10
   laptop_pc_1: 4
   laptop_pc_2: 4
-  large_room_demo: 13
-  mars_rover: 12
-  mass_on_rails: 12
+  metal_panel: 13
   monitor_1: 4
+  monitor_1_clone: 4
   monitor_2: 4
+  monitor_2_clone: 4
+  monitor_2_clone_0: 4
+  monitor_2_clone_1: 4
+  monitor_2_clone_2: 4
+  monitor_2_clone_3: 4
+  monitor_2_clone_4: 4
+  monitor_2_clone_5: 4
+  monitor_2_clone_6: 4
+  monitor_2_clone_8: 4
+  monitor_2_clone_clone: 4
   monitor_3: 4
   monitor_4: 4
-  monkey_wrench: 12
-  mouse: 12
-  mouse_clone: 12
-  mouse_clone_clone: 12
-  mouse_clone_clone_clone: 12
+  monitor_4_0: 4
+  mouse: 4
+  mouse_clone: 4
+  mouse_clone_0: 4
+  mouse_clone_0_clone: 4
+  mouse_clone_0_clone_0: 4
+  mouse_clone_0_clone_1: 4
+  mouse_clone_0_clone_2: 4
+  mouse_clone_clone: 4
+  mouse_clone_clone_clone: 4
   mug_beer: 12
   newspaper_1_0: 12
   newspaper_2: 12
@@ -640,7 +441,17 @@ raw_to_remap:
   office_chair_clone: 3
   office_chair_clone_0: 3
   office_chair_clone_0_clone: 3
-  pallet_full: 5
+  office_chair_clone_0_clone_clone: 3
+  office_chair_clone_clone: 3
+  office_chair_clone_clone_0: 3
+  office_chair_clone_clone_clone: 3
+  office_chair_clone_clone_clone_0: 3
+  office_chair_clone_clone_clone_0_clone: 3
+  office_chair_clone_clone_clone_0_clone_0: 3
+  office_chair_clone_clone_clone_0_clone_1: 3
+  office_chair_clone_clone_clone_0_clone_2: 3
+  office_chair_clone_clone_clone_0_clone_3: 3
+  orange_pole: 12
   pen_blue: 12
   pen_blue_0: 12
   pen_brown_0: 12
@@ -660,13 +471,8 @@ raw_to_remap:
   person_standing: 8
   person_standing_clone: 8
   person_walking: 8
-  person_walking_0: 8
-  person_walking_0_clone: 8
-  person_walking_0_clone_0: 8
-  person_walking_0_clone_1: 8
-  person_walking_0_clone_2: 8
-  person_walking_0_clone_3: 8
   person_walking_clone: 8
+  person_walking_clone_clone: 8
   picture_frame_large_10: 12
   picture_frame_large_3: 12
   picture_frame_large_4: 12
@@ -679,6 +485,8 @@ raw_to_remap:
   picture_frame_small_2: 12
   picture_frame_small_3: 12
   picture_frame_small_4: 12
+  pioneer3at: 12
+  pioneer3at_0: 12
   plant_1: 12
   plant_2: 12
   plant_3: 12
@@ -687,20 +495,21 @@ raw_to_remap:
   plate_1_2: 12
   plate_1_4: 12
   plate_1_6: 12
-  plate_1_broken: 12
   plate_2: 12
+  polycarbonate_panel: 12
   pot_flower: 12
-  quadrotor: 12
-  r2: 12
-  shunk_machine: 12
+  recycle_bin_green: 11
+  recycle_bin_red: 11
+  shelves_high: 9
+  shelves_high_clone: 9
   side_table_1: 10
   side_table_2: 10
   side_table_4: 10
   side_table_set_2: 10
   side_table_set_2_clone: 10
-  sofa_set_1: 3
-  solo: 12
-  t_brace_part: 12
+  simple_arm: 12
+  sofa_set_1: 12
+  standpipe: 12
   table: 10
   table_breakfast: 10
   table_breakfast_clone: 10
@@ -720,29 +529,24 @@ raw_to_remap:
   table_clone_8: 10
   table_clone_9: 10
   table_conference_2: 10
+  table_conference_2_0: 10
+  table_conference_2_0_clone: 10
+  table_conference_2_0_clone_0: 10
+  table_conference_2_0_clone_1: 10
   table_conference_2_clone: 10
   table_conference_3: 10
   table_dining: 10
-  table_dining_0: 10
-  table_dining_0_clone: 10
-  table_dining_0_clone_0: 10
-  table_dining_clone: 10
-  table_dining_clone_0: 10
-  tailsitter: 12
   tall_wall_basic: 13
   tea_box: 5
-  tea_box_0: 5
   textured_panel: 13
   textured_panel_0: 13
-  textured_panel_0_clone: 13
-  textured_panel_clone: 13
+  textured_panel_1: 13
+  textured_panel_2: 13
   tissue_box_1: 5
   tissue_box_1_0: 5
   tissue_box_2: 5
   tissue_box_2_0: 5
   tissue_box_3: 5
-  toolbox_metal: 5
-  toolbox_metal_blue: 5
   toxic_barrel: 1
   toxic_barrel_clone: 1
   toxic_barrel_clone_0: 1
@@ -793,34 +597,6 @@ raw_to_remap:
   toxic_barrel_clone_clone_0: 1
   toxic_barrel_clone_clone_0_clone: 1
   toxic_barrel_clone_clone_0_clone_0: 1
-  toxic_barrel_clone_clone_0_clone_1: 1
-  toxic_barrel_clone_clone_0_clone_1_clone: 1
-  toxic_barrel_clone_clone_0_clone_2: 1
-  toxic_barrel_clone_clone_1: 1
-  toxic_barrel_clone_clone_2: 1
-  toxic_barrel_clone_clone_3: 1
-  toxic_barrel_clone_clone_3_clone: 1
-  toxic_barrel_clone_clone_3_clone_0: 1
-  toxic_barrel_clone_clone_3_clone_0_clone: 1
-  toxic_barrel_clone_clone_3_clone_clone: 1
-  toxic_barrel_clone_clone_3_clone_clone_0: 1
-  toxic_barrel_clone_clone_3_clone_clone_1: 1
-  toxic_barrel_clone_clone_3_clone_clone_2: 1
-  toxic_barrel_clone_clone_3_clone_clone_3: 1
-  toxic_barrel_clone_clone_3_clone_clone_4: 1
-  toxic_barrel_clone_clone_3_clone_clone_5: 1
-  toxic_barrel_clone_clone_3_clone_clone_6: 1
-  toxic_barrel_clone_clone_3_clone_clone_7: 1
-  toxic_barrel_clone_clone_3_clone_clone_7_clone: 1
-  toxic_barrel_clone_clone_3_clone_clone_7_clone_0: 1
-  toxic_barrel_clone_clone_3_clone_clone_7_clone_1: 1
-  toxic_barrel_clone_clone_3_clone_clone_7_clone_2: 1
-  toxic_barrel_clone_clone_3_clone_clone_7_clone_3: 1
-  toxic_barrel_clone_clone_3_clone_clone_7_clone_3_clone: 1
-  toxic_barrel_clone_clone_3_clone_clone_7_clone_3_clone_clone: 1
-  toxic_barrel_clone_clone_3_clone_clone_7_clone_3_clone_clone_0: 1
-  toxic_barrel_clone_clone_3_clone_clone_8: 1
-  toxic_barrel_clone_clone_4: 1
   toxic_barrel_clone_clone_clone: 1
   trash_bin: 11
   trash_bin_0: 11
@@ -829,33 +605,9 @@ raw_to_remap:
   trash_bin_0_clone_1: 11
   trash_bin_1: 11
   trash_bin_2: 11
-  trash_bin_3: 11
-  trash_bin_4: 11
-  trash_bin_5: 11
   tray: 12
-  turtlebot: 12
-  typhoon_h480: 12
-  u_joint_part: 12
-  ur10: 12
-  ur10_clone: 12
-  ur10_clone_0: 12
   vase_blue: 12
   vase_glass: 12
   vase_large_3: 12
   vase_small: 12
   vase_violet: 12
-  wall_cabinet_15x30: 13
-  wall_cabinet_24x15w: 13
-  wall_cabinet_coin_24x30w: 13
-  wire_shelf: 9
-  wire_shelf_clone: 9
-  wire_shelf_clone_0: 9
-  wire_shelf_clone_1: 9
-  wire_shelf_clone_1_clone: 9
-  wire_shelf_clone_1_clone_0: 9
-  wire_shelf_clone_1_clone_1: 9
-  wire_shelf_clone_clone: 9
-  wire_shelf_clone_clone_clone: 9
-  wire_shelf_clone_clone_clone_0: 9
-  wire_shelf_clone_clone_clone_1: 9
-  wooden_case: 5
