@@ -28,7 +28,7 @@ class Voxelizer():
         voxel_grid = np.zeros(self.grid_dims, dtype=np.uint8)
 
         # Convert to voxel indices
-        voxel_origin = np.asarray(self.voxel_origin) # Reorient from [x, y, z] -> [y, z, x] to match voxel conventions
+        voxel_origin = np.asarray(self.voxel_origin) 
         pc_voxel = ((point_cloud - np.asarray(voxel_origin)) / self.voxel_size).astype(np.int32)
 
         # Filter inside grid bounds
