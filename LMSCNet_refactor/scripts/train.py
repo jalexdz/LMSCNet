@@ -88,7 +88,7 @@ def main():
         for i, batch in enumerate(train_loader):
             print(f'Epoch {epoch}, batch {i}')
             optimizer.zero_grad()
-
+            batch = {k: v.cuda() for k, v in batch.items()} 
             scores = model(batch)
             loss_dict = model.compute_loss(scores, batch)
             loss = loss_dict['total']
