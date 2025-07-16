@@ -20,11 +20,14 @@ data:
   class_frequencies: "/home/adiaz/Documents/thesis/repos/LMSCNet/LMSCNet_refactor/configs/class_freq.npy"
   transform: false
 
+eval:
+  save_dir: "/home/adiaz/Documents/thesis/repos/LMSCNet/LMSCNet_refactor/evals/"
+  checkpoint: "/home/adiaz/Documents/thesis/repos/LMSCNet/LMSCNet_refactor/checkpoints/best_model.pt"
 
 train:
   split_ratio: [0.8, 0.1, 0.1] # [train, validate, test]
   epochs: 100
-  batch_size: 1
+  batch_size: 2
   learning_rate: 0.001
   log_every: 5
   checkpoint_dir: checkpoints/
