@@ -3,6 +3,7 @@ import torch
 import yaml
 from models.lmscnet import LMSCNetModel
 import argparse
+import numpy as np
 
 class JitWrapper(torch.nn.Module):
     def __init__(self, model):
@@ -31,7 +32,7 @@ def main():
 
     # Init model
     model = LMSCNetModel(cfg_dict)
-    model.load_state_dict(torch.load(args.weights, map_location=device)['model_state_dict'])
+    model.load_state_dict(torch.load(args.weights, map_location=device))
     model.to(device)
     model.eval()
 
@@ -39,10 +40,14 @@ def main():
     wrapped = JitWrapper(model)
 
     # Dummy input
-    input_dims = cfg_dict['data']['volume_size']
+    vmin = np.array(cfg_dict['data']['volume_size_min'])
+    vmax = np.array(cfg_dict['data']['volume_size_max'])
     voxel_size = cfg_dict['data']['voxel_size']
-    shape = tuple(int((b - a) / voxel_size) for a, b in zip(cfg_dict['data']['volume_size_min'], input_dims))
+    input_dims = np.round((vmax - vmin) / voxel_size).astype(int)    
+
+    shape = input_dims
     dummy_input = torch.zeros((1, 1, shape[0], shape[1], shape[2]), dtype=torch.float32).to(device)
+    print("Gonna script and save")
 
     # Script and save
     scripted = torch.jit.trace(wrapped, dummy_input)
