@@ -58,7 +58,7 @@ class LMSCNet(nn.Module):
     self.nbr_classes = class_num
     self.input_dimensions = input_dimensions  # Grid dimensions should be (W, H, D).. z or height being axis 1
     self.class_frequencies = class_frequencies
-    f = self.input_dimensions[1]
+    f = self.input_dimensions[2]
 
     self.pool = nn.MaxPool2d(2)  # [F=2; S=2; P=0; D=1]
 

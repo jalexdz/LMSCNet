@@ -155,9 +155,14 @@ class Voxelizer():
             dense_voxels.points = o3d.utility.Vector3dVector(dense_centers)
             dense_voxels.paint_uniform_color([0, 0, 1])  # blue
 
+            print(f"sparse voxel shape: {sparse_voxels}")
+            print(f"dense voxel shape: {dense_voxels}")
+            
             # Visualize all together
-            o3d.visualization.draw_geometries([sparse_pcd, dense_voxels])
-
+            o3d.visualization.draw_geometries([sparse_voxels])
+            o3d.visualization.draw_geometries([dense_voxels])
+            o3d.visualization.draw_geometries([sparse_pcd])
+            o3d.visualization.draw_geometries([dense_pcd])
 
     def visualize_voxel_labels(self, voxel_grid):
         import open3d as o3d

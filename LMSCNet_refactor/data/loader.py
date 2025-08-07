@@ -78,6 +78,7 @@ class SynthSSCDataset(Dataset):
         sparse_vox = self.voxelizer.voxelize(np.asarray(sparse_pts))
         label_vox = self.voxelizer.voxelize_with_labels(np.asarray(dense_pts), labels)
         #self.voxelizer.visualize_alignment(sparse_pts, dense_pts, sparse_vox, label_vox)
+        #self.voxelizer.visualize_voxel_labels(label_vox)
 
         if self.mode == 'scan_labels':
             return label_vox.squeeze(0)

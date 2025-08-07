@@ -26,7 +26,7 @@ def compute_class_frequencies(dataset, num_classes, ignore_index=255):
         counts = np.bincount(label, minlength=num_classes)
         class_counts += counts
 
-    frequencies = class_counts / np.sum(class_counts)
+    frequencies = class_counts 
     return frequencies
 
 if __name__ == "__main__":

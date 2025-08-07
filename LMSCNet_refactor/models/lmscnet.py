@@ -14,6 +14,21 @@ import torch.nn as nn
 import numpy as np
 from models.base_model import BaseSSCModel
 
+class FocalLoss(nn.Module):
+    def __init__(self, gamma=1.5, weight=None, ignore_index=255):
+        super().__init__()
+        self.gamma = gamma
+        self.weight = weight
+        self.ignore_index = ignore_index
+
+    def forward(self, input, target):
+        logpt = nn.functional.cross_entropy(input, target, weight=self.weight,
+                                            ignore_index=255,
+                                            reduction='none')
+        pt = torch.exp(-logpt)
+        loss = ((1 - pt) ** self.gamma) * logpt
+        return loss.mean()
+
 class SegmentationHead(nn.Module):
     '''
     3D Segmentation heads to retrieve semantic segmentation at each scale.
@@ -174,10 +189,10 @@ class LMSCNetModel(BaseSSCModel):
         vmax = np.array(cfg['data']['volume_size_max'])
         voxel_size = cfg['data']['voxel_size']
  
-        input_dim = np.round((vmax - vmin) / voxel_size).astype(int)    
+        input_dim = np.round((vmax - vmin) / voxel_size).astype(int)  # (W, H, D)  
 
         num_classes = cfg['model']['num_classes']
-        f = input_dim[1] # Base dimension
+        f = input_dim[1] 
 
         # 2D Encoder (on H x W slices of the voxel grid)
         self.encoder = UNetEncoder(f)
@@ -192,8 +207,8 @@ class LMSCNetModel(BaseSSCModel):
         # Input: {'3D_OCCUPANCY': [B, 1, W, H, D]}
         x = batch['3D_OCCUPANCY']
         x = torch.squeeze(x, dim=1).permute(0, 2, 1, 3)  # → [B, H, W, D]
-    
         x1, x2, x3, x4 = self.encoder(x)
+        
         out = self.decoder(x1, x2, x3, x4)  # 3D segmentation head → [B, num_class, W, H, D]
         
         return {'pred': out.permute(0, 1, 3, 2, 4)}  # B, C, D, H, W → B, C, W, H, D
@@ -204,13 +219,14 @@ class LMSCNetModel(BaseSSCModel):
 
         device, dtype = target.device, target.dtype
 
-        class_weights = self.get_class_weights().to(device=device, dtype=dtype)
+        class_weights = self.get_effective_class_weights().to(device=device, dtype=torch.float32)
+        # criterion = nn.CrossEntropyLoss(
+        #     weight=class_weights,
+        #     ignore_index=255,
+        #     reduction='mean'
+        # ).to(device=device)
 
-        criterion = nn.CrossEntropyLoss(
-            weight=class_weights,
-            ignore_index=255,
-            reduction='mean'
-        ).to(device=device)
+        criterion = FocalLoss(gamma=2.0)
 
         # Compute loss between predicted logits and labels
         loss_main = criterion(scores['pred'], target.long())
@@ -220,9 +236,39 @@ class LMSCNetModel(BaseSSCModel):
     def get_class_weights(self):
         if not hasattr(self, 'class_frequencies'):
             raise ValueError("class_frequencies must be set in cfg to compute class weights.")
-        epsilon = 0.001
+        epsilon = 1
         weights = torch.from_numpy(1 / np.log(self.class_frequencies + epsilon))
+        weights = weights / weights.max()
+        weights[0] = 0.1 * weights[1:].min()
         return weights
-    
+   
+    def get_effective_class_weights(self, beta=0.9999):
+        if not hasattr(self, 'class_frequencies'):
+            raise ValueError("class_frequencies must be set")
+
+        counts = self.class_frequencies.astype(np.float32)
+        scaled_counts = counts / 1e6  # Avoid overflow from large raw values
+
+        effective_num = 1.0 - np.power(beta, scaled_counts)
+        weights = (1.0 - beta) / (effective_num + 1e-8)  # stabilize div
+        weights = weights / weights.max()  # normalize to [0, 1]
+
+        # Rescale to [0.5, 2.0]
+        min_val, max_val = 1.0, 5.0
+        weights = min_val + (max_val - min_val) * (weights - weights.min()) / (weights.max() - weights.min())
+
+        # Manually downscale class 0 to prevent collapse
+        weights[0] = 0.05  # empirically safe — tune as needed
+
+        return torch.tensor(weights, dtype=torch.float32)
+
+    def weights_initializer(self, m):
+        if isinstance(m, nn.Conv2d):
+            nn.init.kaiming_uniform_(m.weight)
+            nn.init.zeros_(m.bias)
+
+    def weights_init(self):
+        self.apply(self.weights_initializer)
+
     def get_target(self, batch):
         return batch['3D_LABEL'] 

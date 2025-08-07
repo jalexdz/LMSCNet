@@ -18,3 +18,5 @@ test_loader = DataLoader(
 
 for idx, batch in enumerate(test_loader):
     print(f"Batch {idx + 1}:", batch['3D_OCCUPANCY'].max(), batch['3D_LABEL'].max())
+    print(f"sparse shape: {batch['3D_OCCUPANCY'].shape}")
+    print(f"dense shape: {batch['3D_LABEL'].shape}")

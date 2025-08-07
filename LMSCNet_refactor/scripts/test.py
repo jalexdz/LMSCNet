@@ -14,7 +14,7 @@ import numpy as np
 import open3d as o3d
 import torch
 from tqdm import tqdm
-from torch.utils.data import DataLoader
+from torch.utils.data import DataLoader, Subset
 
 sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), '..')))
 from models.lmscnet import LMSCNetModel
@@ -66,11 +66,13 @@ def test_and_save(cfg):
     device = torch.device('cuda' if torch.cuda.is_available() else 'cpu')
 
     model = LMSCNetModel(cfg).to(device)
-    model.load_state_dict(torch.load(cfg['eval']['checkpoint'], map_location=device))
+    model.load_state_dict(torch.load(cfg['eval']['checkpoint'], map_location=device)['model_state_dict'])
     model.eval()
 
     test_set = SynthSSCDataset(cfg, split='test')
-    test_loader = DataLoader(test_set, batch_size=1, shuffle=False)
+    subset = Subset(test_set, [12, 56, 199, 3000, 1000])
+
+    test_loader = DataLoader(subset, batch_size=1, shuffle=False)
 
     save_dir = cfg['eval']['save_dir']
     os.makedirs(save_dir, exist_ok=True)

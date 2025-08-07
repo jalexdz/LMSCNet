@@ -32,7 +32,7 @@ def main():
 
     # Init model
     model = LMSCNetModel(cfg_dict)
-    model.load_state_dict(torch.load(args.weights, map_location=device))
+    model.load_state_dict(torch.load(args.weights, map_location=device)['model_state_dict'])
     model.to(device)
     model.eval()
 
